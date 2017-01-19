@@ -45,10 +45,8 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	__export(__webpack_require__(1));
+	var Counter_1 = __webpack_require__(1);
+	exports.Counter = Counter_1.Counter;
 
 
 /***/ },
