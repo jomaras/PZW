@@ -11,4 +11,4 @@ if(mainContainer){
         React.createElement(Counter, {}),
         mainContainer
     )
-};
+}
