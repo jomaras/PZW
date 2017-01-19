@@ -7,7 +7,8 @@ const config = {
     },
     output:{
         path: "./bin/js",
-        filename: "[name].js"
+        filename: "[name].js",
+        libraryTarget: "umd"
     },
     devtool:'source-map',
     module: {
