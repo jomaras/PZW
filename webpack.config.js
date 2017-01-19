@@ -1,10 +1,9 @@
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
+const config = {
     entry: {
-        'vendor': './src/ts/vendor.ts',
-        'app': './src/ts/main.ts',
+        'app': './src/ts/main.ts'
     },
     output:{
         path: "./bin/js",
@@ -21,10 +20,6 @@ module.exports = {
         modulesDirectories: ["node_modules"]
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin({
-            name: ['app', 'vendor']
-        }),
-        new webpack.optimize.DedupePlugin(),
         new HtmlWebpackPlugin({
             hash: true,
             template: "./src/index.html",
@@ -32,3 +27,23 @@ module.exports = {
         })
     ]
 };
+
+if(process.env.PROD){
+    config.externals = {
+        "react": {
+            commonjs: 'react',
+            commonjs2: 'react',
+            amd: 'react',
+            root: 'React'
+        },
+        "react-dom": {
+            commonjs: 'react-dom',
+            commonjs2: 'react-dom',
+            amd: 'react-dom',
+            root: 'ReactDOM'
+        }
+    };
+}
+
+
+module.exports = config;
