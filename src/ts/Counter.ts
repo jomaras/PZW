@@ -1,5 +1,6 @@
 export default class Counter {
     public currentNumber: number;
+    public anotherNumber: number;
 
     constructor(){
         this.currentNumber = 0;

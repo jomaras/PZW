@@ -2,7 +2,7 @@
   "name": "pzw",
   "version": "1.0.0",
   "description": "Test the inclusion of Typescript components through npm",
-  "main": "index.js",
+  "main": "bin/js/app.js",
   "scripts": {
     "start": "concurrently \"serve --port 3000\" \"webpack --watch --progress\"",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +16,7 @@
   ],
   "author": "Josip Maras",
   "license": "ISC",
+  "typings":"declarations/main.d.ts",
   "bugs": {
     "url": "https://github.com/jomaras/PZW/issues"
   },

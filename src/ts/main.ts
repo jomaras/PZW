@@ -1,3 +1,5 @@
+export * from './Counter';
+
 import Counter from './Counter';
 
 const counter = new Counter();
