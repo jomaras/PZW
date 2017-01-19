@@ -1,0 +1,31 @@
+{
+  "name": "pzw",
+  "version": "1.0.0",
+  "description": "Test the inclusion of Typescript components through npm",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"serve --port 3000\" \"webpack --watch --progress\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jomaras/PZW.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Josip Maras",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jomaras/PZW/issues"
+  },
+  "homepage": "https://github.com/jomaras/PZW#readme",
+  "devDependencies": {
+    "concurrently": "^3.1.0",
+    "html-webpack-plugin": "^2.26.0",
+    "serve": "^2.4.0",
+    "ts-loader": "^1.3.3",
+    "typescript": "^2.1.5",
+    "webpack": "^1.14.0"
+  }
+}

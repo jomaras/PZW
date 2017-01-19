@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true,
+    "declarationDir": "declarations",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "watch": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "outDir": "javascripts/bin",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "filesGlob": [
+    "./**/*.ts"
+  ]  
+}
