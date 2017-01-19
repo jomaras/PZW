@@ -48,39 +48,11 @@
 	function __export(m) {
 	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 	}
-	var React = __webpack_require__(1);
-	var ReactDOM = __webpack_require__(2);
-	var Counter_1 = __webpack_require__(3);
-	__export(__webpack_require__(3));
-	var DummyClass = (function () {
-	    function DummyClass() {
-	    }
-	    DummyClass.prototype.sayHello = function () {
-	        alert("Hello");
-	    };
-	    return DummyClass;
-	}());
-	exports.DummyClass = DummyClass;
-	var mainContainer = document.getElementById("main-container");
-	if (mainContainer) {
-	    ReactDOM.render(React.createElement(Counter_1.Counter, {}), mainContainer);
-	}
+	__export(__webpack_require__(1));
 
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
-
-	module.exports = require("react");
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	module.exports = require("react-dom");
-
-/***/ },
-/* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -89,7 +61,7 @@
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var React = __webpack_require__(1);
+	var React = __webpack_require__(2);
 	var Counter = (function (_super) {
 	    __extends(Counter, _super);
 	    function Counter() {
@@ -120,6 +92,12 @@
 	}(React.Component));
 	exports.Counter = Counter;
 
+
+/***/ },
+/* 2 */
+/***/ function(module, exports) {
+
+	module.exports = require("react");
 
 /***/ }
 /******/ ]);
