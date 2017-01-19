@@ -5,7 +5,7 @@
   "main": "bin/js/app.js",
   "scripts": {
     "start": "concurrently \"serve --port 3000\" \"webpack --watch --progress\"",
-    "pack": "PROD=1 webpack -progress",
+    "pack": "webpack -progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -25,16 +25,14 @@ const config = {
             template: "./src/index.html",
             filename: "./../../index.html"
         })
-    ]
-};
-
-if(process.env.PROD){
-    config.externals = {
+    ],
+    externals: {
         "react": {
             commonjs: 'react',
             commonjs2: 'react',
             amd: 'react',
-            root: 'React'
+            root: 'React',
+            umd: ""
         },
         "react-dom": {
             commonjs: 'react-dom',
@@ -42,8 +40,7 @@ if(process.env.PROD){
             amd: 'react-dom',
             root: 'ReactDOM'
         }
-    };
-}
-
+    }
+};
 
 module.exports = config;
