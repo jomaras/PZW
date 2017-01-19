@@ -1,11 +1,18 @@
-export * from './Counter';
-
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { Counter } from './Counter';
 
-const counter = new Counter();
-counter.increment();
+export * from './Counter';
 
-const newParagraph = document.createElement("p");
-newParagraph.textContent = counter.currentNumber + "";
+export class Main {
 
-document.getElementsByTagName("body")[0].appendChild(newParagraph);
+}
+
+const mainContainer = document.getElementById("main-container");
+
+if(mainContainer){
+    ReactDOM.render(
+        React.createElement(Counter, {}),
+        mainContainer
+    )
+};

@@ -1,7 +1,11 @@
-export class Counter {
-    currentNumber: number;
-    anotherNumber: number;
+/// <reference types="react" />
+import * as React from 'react';
+export interface IState {
+    counter: number;
+}
+export declare class Counter extends React.Component<{}, IState> {
     constructor();
-    increment(): void;
-    decrement(): void;
+    render(): JSX.Element;
+    private increment();
+    private decrement();
 }
