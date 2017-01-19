@@ -1,4 +1,4 @@
-export default class Counter {
+export class Counter {
     currentNumber: number;
     anotherNumber: number;
     constructor();

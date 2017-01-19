@@ -1,4 +1,4 @@
-export default class Counter {
+export class Counter {
     public currentNumber: number;
     public anotherNumber: number;
 

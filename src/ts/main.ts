@@ -1,6 +1,6 @@
 export * from './Counter';
 
-import Counter from './Counter';
+import { Counter } from './Counter';
 
 const counter = new Counter();
 counter.increment();
