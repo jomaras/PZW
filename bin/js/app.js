@@ -11,6 +11,15 @@ webpackJsonp([0],{
 	var ReactDOM = __webpack_require__(32);
 	var Counter_1 = __webpack_require__(178);
 	__export(__webpack_require__(178));
+	var DummyClass = (function () {
+	    function DummyClass() {
+	    }
+	    DummyClass.prototype.sayHello = function () {
+	        alert("Hello");
+	    };
+	    return DummyClass;
+	}());
+	exports.DummyClass = DummyClass;
 	var mainContainer = document.getElementById("main-container");
 	if (mainContainer) {
 	    ReactDOM.render(React.createElement(Counter_1.Counter, {}), mainContainer);
