@@ -71,13 +71,13 @@
 /* 1 */
 /***/ function(module, exports) {
 
-	module.exports = undefined;
+	module.exports = require("react");
 
 /***/ },
 /* 2 */
 /***/ function(module, exports) {
 
-	module.exports = undefined;
+	module.exports = require("react-dom");
 
 /***/ },
 /* 3 */
