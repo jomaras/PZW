@@ -7,6 +7,7 @@
     "declarationDir": "./../../declarations",
     "noImplicitAny": false,
     "removeComments": true,
+    "allowSyntheticDefaultImports": true,
     "noLib": false,
     "watch": true,
     "sourceMap": true,

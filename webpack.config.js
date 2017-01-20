@@ -1,13 +1,14 @@
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
-    entry:{
-        app: ["./src/ts/main"]
+const config = {
+    entry: {
+        'app': './src/ts/main.ts'
     },
     output:{
         path: "./bin/js",
-        filename: "[name].js"
+        filename: "[name].js",
+        libraryTarget: "umd"
     },
     devtool:'source-map',
     module: {
@@ -20,10 +21,16 @@ module.exports = {
         modulesDirectories: ["node_modules"]
     },
     plugins: [
-    new HtmlWebpackPlugin({
-        hash: true,
-        template: "./src/index.html",
-        filename: "./../../index.html"
-    })
-  ]
+        new HtmlWebpackPlugin({
+            hash: true,
+            template: "./src/index.html",
+            filename: "./../../index.html"
+        })
+    ],
+    externals: {
+        'react': 'commonjs react',
+        'react-dom' : 'commonjs react-dom'
+    }
 };
+
+module.exports = config;
