@@ -22,6 +22,7 @@
     "bin/*",
     "node_modules/*",
     "declarations/*",
-    "index.html"
+    "index.html",
+    "spec"
   ]
 }

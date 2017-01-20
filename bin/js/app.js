@@ -21529,11 +21529,14 @@
 	    Counter.prototype.render = function () {
 	        var _this = this;
 	        return (React.createElement("div", null,
-	            React.createElement("button", { onClick: function () { return _this.decrement(); } }, "-"),
-	            this.state.counter,
-	            React.createElement("button", { onClick: function () { return _this.increment(); } }, "+")));
+	            React.createElement("button", { className: "decrement-button", onClick: function () { return _this.decrement(); } }, "-"),
+	            React.createElement("span", { className: "counter-text-container" }, this.state.counter),
+	            React.createElement("button", { className: "increment-button", onClick: function () { return _this.increment(); } }, "+")));
 	    };
 	    Counter.prototype.increment = function () {
+	        if (this.state.counter === 2) {
+	            this.state.counter = this.state.counter * 2;
+	        }
 	        this.setState({
 	            counter: this.state.counter + 1
 	        });

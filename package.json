@@ -5,7 +5,8 @@
   "main": "bin/js/app.js",
   "scripts": {
     "start": "concurrently \"serve --port 3000\" \"webpack --watch --progress\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test-coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -16,23 +17,43 @@
   ],
   "author": "Josip Maras",
   "license": "ISC",
-  "typings":"declarations/main.d.ts",
+  "typings": "declarations/main.d.ts",
   "bugs": {
     "url": "https://github.com/jomaras/PZW/issues"
   },
   "homepage": "https://github.com/jomaras/PZW#readme",
   "dependencies": {
-    "@types/react": "^15.0.0",    
+    "@types/react": "^15.0.0",
     "@types/react-dom": "^0.14.20",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
+    "@types/jest": "^16.0.4",
+    "@types/react-addons-test-utils": "^0.14.16",
     "concurrently": "^3.1.0",
     "html-webpack-plugin": "^2.26.0",
+    "jest": "^18.1.0",
+    "react-addons-test-utils": "^15.4.2",
     "serve": "^2.4.0",
     "ts-loader": "^1.3.3",
     "typescript": "^2.1.5",
     "webpack": "^1.14.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/spec/.*\\.(ts|js|tsx)$",
+      "/bin/.*\\.(ts|js)$"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/test.preprocessor.js"
+    },
+    "testRegex": "/spec/.*\\.(ts|tsx|js)$"
   }
 }
