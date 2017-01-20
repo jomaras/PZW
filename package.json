@@ -7,7 +7,7 @@
     "start": "concurrently \"serve --port 3000\" \"webpack --watch --progress\"",
     "test": "jest",
     "test-coverage": "jest --coverage",
-    "pack": "webpack -progress",
+    "pack": "webpack -progress"
   },
   "repository": {
     "type": "git",
